@@ -1,5 +1,6 @@
 <html class=""><head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/scrollreveal"></script>
 <style>
 body, html {
   height: 100%;
@@ -84,7 +85,7 @@ h3 {
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  <div class="reveal"><p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p></div>
   </div>
 </div>
 
@@ -104,3 +105,7 @@ h3 {
   <div class="caption">
   <span class="border">COOL!</span>
   </div>
+
+<script>
+		ScrollReveal().reveal('.reveal', { delay: 300, duration: 2000, reset: true })
+</script>
