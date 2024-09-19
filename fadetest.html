@@ -1,0 +1,49 @@
+<style>
+.nice-header {
+  position: relative;
+  height: 500px;
+  background: center center;
+  background-size: cover;
+  background-image: url(https://jbenedict.work/blake/assets/img/citywoman.png);
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 0.2;
+}
+
+.dummy {
+  height: 900px;
+}
+
+</style>
+
+<div class='nice-header'>
+  <div class='header-overlay'>
+
+  </div>
+</div>
+<div class='dummy'>
+
+</div>
+
+
+<script>
+$(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.header-overlay').css({
+    opacity: function() {
+      var elementHeight = $(this).height(),
+          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
+          
+      return opacity;
+    }
+  });
+});
+</script>
