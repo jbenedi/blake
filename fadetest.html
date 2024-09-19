@@ -1,49 +1,71 @@
-<style>
-.nice-header {
-  position: relative;
-  height: 500px;
-  background: center center;
-  background-size: cover;
-  background-image: url(https://jbenedict.work/blake/assets/img/citywoman.png);
-}
-
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0);
-  opacity: 0.2;
-}
-
-.dummy {
-  height: 900px;
-}
-
-</style>
-
-<div class='nice-header'>
-  <div class='header-overlay'>
-
-  </div>
-</div>
-<div class='dummy'>
-
-</div>
-
-
-<script>
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
-
-  $('.header-overlay').css({
-    opacity: function() {
-      var elementHeight = $(this).height(),
-          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
-          
-      return opacity;
-    }
-  });
-});
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      #content {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         background-color: #000;
+         color: #fff;
+         padding: 10px;
+      }
+      h4 {
+         margin-top: 100px;
+      }
+   </style>
+</head>
+<body>
+   <div id="content">
+      <p>Header content</p>
+   </div>
+   <p>Some content</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <br>
+   <br>
+   <p>Some more content</p>
+   <script>
+      window.addEventListener("scroll", function () {
+         let header = document.getElementById("content");
+         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+         header.style.opacity = 1 - scrollTop / 200;
+      });
+   </script>
+</body>
+</html>
